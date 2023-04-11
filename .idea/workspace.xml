@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeff254e-26a6-4e36-8520-bf139291434c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/SpringWebApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/controllers/AboutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/controllers/GoalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/controllers/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/controllers/SignController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/controllers/StationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/project/controllers/WorkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/about/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/goals/goals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/goals/goals_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/home/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/layouts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/sign_in/sign_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/stations/stations.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/stations/stations_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/workers/workers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/templates/workers/workers_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dtb/src/main/java/org/project/entities/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dtb/src/main/java/org/project/entities/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dtb/src/main/java/org/project/entities/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dtb/src/main/java/org/project/repositories/WorkerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtb/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtb/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtb/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtb/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,16 +14,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2OGJKfFR3qUlwGnO7u5st7qgKNA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -72,13 +31,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "last_opened_file_path": "D:/SpringWeb/dtb/src/main/java/org/project/entities",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SpringWeb" />
       <recent name="D:\SpringWeb\dtb\src\main\java\org\project\entities" />
       <recent name="D:\SpringWeb\api\src\main\java\org\project" />
       <recent name="D:\SpringWeb\api\src\main\resources\templates" />
