@@ -1,0 +1,99 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="test" author="akhameth">
+
+        <createTable tableName="timeperiod">
+            <column name="id_timeperiod" type="bigserial">
+                <constraints unique="true" primaryKey="true"/>
+            </column>
+            <column name="start_time" type="java.sql.types.timestamp_with_timezone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_time" type="java.sql.types.timestamp_with_timezone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="goal">
+            <column name="id_goal" type="bigserial">
+                <constraints unique="true" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_timeperiod" type="bigserial">
+                <constraints primaryKey="true" nullable="false" foreignKeyName="timeperiod_goal_id_fk"
+                             references="timeperiod(id_timeperiod)"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="station">
+            <column name="id_station" type="bigserial">
+                <constraints unique="true" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_goal" type="bigserial">
+                <constraints primaryKey="true" nullable="false" foreignKeyName="goal_id_fk"
+                             references="goal(id_goal)"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="gender">
+            <column name="id_gender" type="bigserial">
+                <constraints unique="true" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(200)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="worker">
+            <column name="id_worker" type="bigserial">
+                <constraints unique="true" primaryKey="true"/>
+            </column>
+            <column name="age" type="int">
+                <constraints nullable="false"   />
+            </column>
+            <column name="name" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_gender" type="bigserial">
+                <constraints primaryKey="true" nullable="false" foreignKeyName="gender_worker_id_fk"
+                             references="gender(id_gender)"/>
+            </column>
+            <column name="date_of_birth" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+
+
+
+
+        <createTable tableName="station_worker">
+            <column name="id_station" type="bigserial">
+                <constraints primaryKey="true" nullable="false" foreignKeyName="station_worker_id_fk"
+                             references="station(id_station)"/>
+            </column>
+            <column name="id_worker" type="bigserial">
+                <constraints primaryKey="true" nullable="false" foreignKeyName="worker_station_id_fk"
+                             references="worker(id_worker)"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

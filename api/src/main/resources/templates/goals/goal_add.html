@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Goal</title>
+    <th:block th:insert="layouts :: headerfiles"/>
+</head>
+<body>
+<nav th:replace="layouts :: navbar"/>
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="description" placeholder="Description">
+                    <label for="description">Description</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="startTime" placeholder="Start Time">
+                    <label for="startTime">Start Time</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="endTime" placeholder="End Time">
+                    <label for="endTime">End Time</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Accept</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stations List</title>
+    <th:block th:insert="layouts :: headerfiles"/>
+</head>
+<body>
+<nav th:replace="layouts :: navbar"/>
+
+<div class="col-lg-6 col-xxl-4 my-1 mx-auto">
+    <div class="d-grid gap-2">
+        <a class="btn btn-primary" th:href="@{/stations/add/new}" role="button">New Station</a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="station : ${stations}">
+        <th scope="row" th:text="${station.getId()}"/>
+        <td th:text="${station.getName()}"/>
+        <td>
+            <a class="btn btn-info rounded-pill px-3" th:href="@{/stations/{stationId}(stationId=${station.getId()})}" role="button">More</a>
+        </td>
+        <td>
+            <a class="btn btn-warning rounded-pill px-3" th:href="@{/stations/edit/{stationId}(stationId=${station.getId()})}" role="button">Edit</a>
+        </td>
+        <td>
+            <a class="btn btn-danger rounded-pill px-3" th:href="@{/stations/delete/{stationId}(stationId=${station.getId()})}" role="button">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

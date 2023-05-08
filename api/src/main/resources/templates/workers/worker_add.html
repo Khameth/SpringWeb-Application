@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Worker</title>
+    <th:block th:insert="layouts :: headerfiles"/>
+</head>
+<body>
+<nav th:replace="layouts :: navbar"/>
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="surname" placeholder="Surname">
+                    <label for="surname">Surname</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="form-check form-check-inline mb-3">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio1" value="male">
+                    <label class="form-check-label" for="genderRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio2" value="female">
+                    <label class="form-check-label" for="genderRadio2">Female</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="birthday" placeholder="Date of Birth">
+                    <label for="birthday">Date of Birth</label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="stations">Stations</label>
+                    <select multiple class="form-control" id="stations">
+                        <option>Energy</option>
+                        <option>Transport</option>
+                        <option>Oxygen</option>
+                        <option>Food</option>
+                        <option>example</option>
+                        <option>example</option>
+                        <option>example</option>
+                        <option>example</option>
+                    </select>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Accept</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
