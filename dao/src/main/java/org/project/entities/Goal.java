@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -23,8 +24,7 @@ public class Goal {
     private String name;
     @NotBlank(message = "Description may not be empty")
     private String description;
-    @OneToOne
-    @JoinColumn(name = "id_timeperiod")
-    private TimePeriod goalTimePeriod;
+    private LocalDate startTime;
+    private LocalDate endTime;
 
 }

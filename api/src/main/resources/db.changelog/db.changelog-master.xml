@@ -6,18 +6,6 @@
 
     <changeSet id="test" author="akhameth">
 
-        <createTable tableName="timeperiod">
-            <column name="id_timeperiod" type="bigserial">
-                <constraints unique="true" primaryKey="true"/>
-            </column>
-            <column name="start_time" type="java.sql.types.timestamp_with_timezone">
-                <constraints nullable="false"/>
-            </column>
-            <column name="end_time" type="java.sql.types.timestamp_with_timezone">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
         <createTable tableName="goal">
             <column name="id_goal" type="bigserial">
                 <constraints unique="true" primaryKey="true"/>
@@ -28,9 +16,11 @@
             <column name="description" type="varchar(200)">
                 <constraints nullable="false"/>
             </column>
-            <column name="id_timeperiod" type="bigserial">
-                <constraints primaryKey="true" nullable="false" foreignKeyName="timeperiod_goal_id_fk"
-                             references="timeperiod(id_timeperiod)"/>
+            <column name="start_time" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_time" type="date">
+                <constraints nullable="false"/>
             </column>
         </createTable>
 
@@ -50,21 +40,9 @@
             </column>
         </createTable>
 
-        <createTable tableName="gender">
-            <column name="id_gender" type="bigserial">
-                <constraints unique="true" primaryKey="true"/>
-            </column>
-            <column name="name" type="varchar(200)">
-                <constraints unique="true" nullable="false"/>
-            </column>
-        </createTable>
-
         <createTable tableName="worker">
             <column name="id_worker" type="bigserial">
                 <constraints unique="true" primaryKey="true"/>
-            </column>
-            <column name="age" type="int">
-                <constraints nullable="false"   />
             </column>
             <column name="name" type="varchar(200)">
                 <constraints nullable="false"/>
@@ -72,9 +50,8 @@
             <column name="surname" type="varchar(200)">
                 <constraints nullable="false"/>
             </column>
-            <column name="id_gender" type="bigserial">
-                <constraints primaryKey="true" nullable="false" foreignKeyName="gender_worker_id_fk"
-                             references="gender(id_gender)"/>
+            <column name="gender" type="varchar(200)">
+                <constraints nullable="false"/>
             </column>
             <column name="date_of_birth" type="date">
                 <constraints nullable="false"/>

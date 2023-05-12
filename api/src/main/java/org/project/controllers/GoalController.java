@@ -3,9 +3,7 @@ package org.project.controllers;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.project.entities.Goal;
-import org.project.entities.TimePeriod;
 import org.project.services.GoalService;
-import org.project.services.TimePeriodService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +13,6 @@ import springfox.documentation.annotations.ApiIgnore;
 @RequestMapping("/goals")
 @AllArgsConstructor
 public class GoalController {
-    private TimePeriodService timePeriodService;
     private GoalService goalService;
 
     @ApiOperation(value = "Get all goals")
@@ -34,7 +31,7 @@ public class GoalController {
     @ApiOperation(value = "Create new goal")
     @GetMapping("/add/new")
     public String createGoal(Model model){
-        model.addAttribute("goal", Goal.builder().goalTimePeriod(new TimePeriod()).build());
+        model.addAttribute("goal", new Goal());
         return "goals/goal_add";
     }
 
@@ -42,7 +39,6 @@ public class GoalController {
     @ApiIgnore
     @PostMapping("/add")
     public String create(Goal goal){
-        timePeriodService.save(goal.getGoalTimePeriod());
         goalService.save(goal);
         return "redirect:/goals/list";
     }

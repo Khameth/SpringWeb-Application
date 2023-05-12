@@ -27,9 +27,7 @@ public class Worker {
     private String name;
     @NotBlank(message = "Surname may not be empty")
     private String surname;
-    @ManyToOne
-    @JoinColumn(name = "id_gender")
-    private Gender gender;
+    private String gender;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @NotNull
     private LocalDate dateOfBirth;

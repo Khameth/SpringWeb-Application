@@ -2,7 +2,6 @@ package org.project.controllers;
 
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
-import org.project.entities.Gender;
 import org.project.entities.Worker;
 import org.project.services.WorkerService;
 import org.springframework.stereotype.Controller;
@@ -33,7 +32,7 @@ public class WorkerController {
     @ApiOperation(value = "Create new worker")
     @GetMapping("/add/new")
     public String createWorker(Model model) {
-        model.addAttribute("worker", Worker.builder().gender(new Gender()).build());
+        model.addAttribute("worker", Worker.builder().build());
         return "workers/worker_add";
     }
 

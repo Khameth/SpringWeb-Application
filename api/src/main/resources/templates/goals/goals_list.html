@@ -9,7 +9,7 @@
 
 <div class="col-lg-6 col-xxl-4 my-1 mx-auto">
     <div class="d-grid gap-2">
-        <a class="btn btn-primary" th:href="@{/workers/add/new}" role="button">New Worker</a>
+        <a class="btn btn-primary" th:href="@{/goals/add/new}" role="button">New Goal</a>
     </div>
 </div>
 
@@ -18,22 +18,20 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Deadline</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="timeperiod : ${timeperiods}">
-        <th scope="row" th:text="${timeperiod.getId()}"/>
-        <td th:text="${timeperiod.getName()}"/>
-        <td th:text="${timeperiod.getGoalTimePeriod()}"/>
+    <tr th:each="goal : ${goals}">
+        <td scope="row" th:text="${goal.getId()}"/>
+        <td th:text="${goal.getName()}"/>
         <td>
-            <a class="btn btn-info rounded-pill px-3" th:href="@{/stations/{stationId}(stationId=${station.getId()})}" role="button">More</a>
+            <a class="btn btn-info rounded-pill px-3" th:href="@{/goals/{goalId}(goalId=${goal.getId()})}" role="button">More</a>
         </td>
         <td>
-            <a class="btn btn-warning rounded-pill px-3" th:href="@{/stations/edit/{stationId}(stationId=${station.getId()})}" role="button">Edit</a>
+            <a class="btn btn-warning rounded-pill px-3" th:href="@{/goals/edit/{goalId}(goalId=${goal.getId()})}" role="button">Edit</a>
         </td>
         <td>
-            <a class="btn btn-danger rounded-pill px-3" th:href="@{/stations/delete/{stationId}(stationId=${station.getId()})}" role="button">Delete</a>
+            <a class="btn btn-danger rounded-pill px-3" th:href="@{/goals/delete/{goalId}(goalId=${goal.getId()})}" role="button">Delete</a>
         </td>
     </tr>
 </table>

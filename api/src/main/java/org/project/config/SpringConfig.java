@@ -9,10 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfig {
     @Bean
-    public GenderService genderService(GenderRepository genderRepository){
-        return new GenderService(genderRepository);
-    }
-    @Bean
     public GoalService goalService(GoalRepository goalRepository){
         return new GoalService(goalRepository);
     }
@@ -21,22 +17,14 @@ public class SpringConfig {
         return  new StationService(stationRepository);
     }
     @Bean
-    public TimePeriodService timePeriodService(TimePeriodRepository timePeriodRepository) {
-        return new TimePeriodService(timePeriodRepository);
-    }
-    @Bean
     public WorkerService workerService(WorkerRepository workerRepository){
         return new WorkerService(workerRepository);
     }
     @Bean
     public AboutController aboutController(){return new AboutController();}
     @Bean
-    public GenderController genderController(GenderService genderService){
-        return new GenderController(genderService);
-    }
-    @Bean
-    public GoalController goalController(GoalService goalService,TimePeriodService timePeriodService){
-        return new GoalController(timePeriodService,goalService);
+    public GoalController goalController(GoalService goalService){
+        return new GoalController(goalService);
     }
     @Bean
     public HomeController homeController(){return new HomeController();}

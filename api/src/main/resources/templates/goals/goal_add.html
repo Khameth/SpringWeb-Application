@@ -11,23 +11,36 @@
     <div class="row align-items-center g-lg-5 py-5">
 
         <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary"
+                  th:object="${goal}" th:action="@{/goals/add}" method="post">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <input type="text" class="form-control" id="name" placeholder="Name"
+                           th:field="${goal.name}">
                     <label for="name">Name</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="description" placeholder="Description">
+                    <input type="text" class="form-control" id="description" placeholder="Description"
+                           th:field="${goal.description}">
                     <label for="description">Description</label>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="date" class="form-control" id="startTime" placeholder="Start Time">
-                    <label for="startTime">Start Time</label>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" id="startTime" placeholder="Start Time"
+                                   th:field="${goal.startTime}">
+                            <label for="startTime">Start Time</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" id="endTime" placeholder="End Time"
+                                   th:field="${goal.endTime}">
+                            <label for="endTime">End Time</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="date" class="form-control" id="endTime" placeholder="End Time">
-                    <label for="endTime">End Time</label>
-                </div>
+
+
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Accept</button>
 
 
