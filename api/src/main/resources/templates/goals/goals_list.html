@@ -22,16 +22,16 @@
     </thead>
     <tbody>
     <tr th:each="goal : ${goals}">
-        <td scope="row" th:text="${goal.getId()}"/>
+        <th scope="row" th:text="${goal.getId()}"/>
         <td th:text="${goal.getName()}"/>
         <td>
-            <a class="btn btn-info rounded-pill px-3" th:href="@{/goals/{goalId}(goalId=${goal.getId()})}" role="button">More</a>
+            <a style="color: white" class="btn btn-info rounded-pill px-3" th:href="@{/goals/{goalId}(goalId=${goal.getId()})}" role="button">Info</a>
         </td>
         <td>
-            <a class="btn btn-warning rounded-pill px-3" th:href="@{/goals/edit/{goalId}(goalId=${goal.getId()})}" role="button">Edit</a>
+            <a style="color: white" class="btn btn-warning rounded-pill px-3" th:href="@{/goals/edit/{goalId}(goalId=${goal.getId()})}" role="button">Edit</a>
         </td>
         <td>
-            <a class="btn btn-danger rounded-pill px-3" th:href="@{/goals/delete/{goalId}(goalId=${goal.getId()})}" role="button">Delete</a>
+            <a style="color: white" class="btn btn-danger rounded-pill px-3" th:href="@{/goals/delete/{goalId}(goalId=${goal.getId()})}" role="button">Delete</a>
         </td>
     </tr>
 </table>

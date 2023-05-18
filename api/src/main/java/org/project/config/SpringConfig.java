@@ -23,8 +23,8 @@ public class SpringConfig {
     @Bean
     public AboutController aboutController(){return new AboutController();}
     @Bean
-    public GoalController goalController(GoalService goalService){
-        return new GoalController(goalService);
+    public GoalController goalController(GoalService goalService,StationService stationService){
+        return new GoalController(goalService,stationService);
     }
     @Bean
     public HomeController homeController(){return new HomeController();}

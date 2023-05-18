@@ -6,7 +6,68 @@
 </head>
 <body>
 <nav th:replace="layouts :: navbar"/>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
 
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
 
+                <div class="form-floating mb-3">
+                    <input type="text" readonly class="form-control" id="surname" placeholder="Surname"
+                           th:value="${worker.surname}">
+                    <label for="surname">Surname</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" readonly class="form-control" id="name" placeholder="Name"
+                           th:value="${worker.name}">
+                    <label for="name">Name</label>
+                </div>
+
+                <div th:switch="${worker.gender}">
+                    <div th:case="male">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check form-check-inline mb-3">
+                                    <input disabled class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio1" value="male" checked>
+                                    <label class="form-check-label" for="genderRadio1">Male</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input disabled class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio2" value="female">
+                                    <label class="form-check-label" for="genderRadio2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:case="female">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check form-check-inline mb-3">
+                                    <input disabled class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio3" value="male">
+                                    <label class="form-check-label" for="genderRadio1">Male</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input disabled class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio4" value="female" checked>
+                                    <label class="form-check-label" for="genderRadio2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="date" readonly class="form-control" id="birthday" placeholder="Date of Birth"
+                           th:value="${worker.dateOfBirth}">
+                    <label for="birthday">Date of Birth</label>
+                </div>
+                <a class="w-100 btn btn-lg btn-primary" role="button" href="/workers/list">Back</a>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

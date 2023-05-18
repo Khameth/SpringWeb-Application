@@ -34,5 +34,8 @@ public class Worker {
     @ManyToMany(mappedBy = "workers")
     private List<Station> stations;
 
-
+    @Override
+    public String toString() {
+        return name + " " + surname;
+    }
 }

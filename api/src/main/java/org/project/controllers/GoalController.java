@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.project.entities.Goal;
 import org.project.services.GoalService;
+import org.project.services.StationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import springfox.documentation.annotations.ApiIgnore;
 @AllArgsConstructor
 public class GoalController {
     private GoalService goalService;
+    private StationService stationService;
 
     @ApiOperation(value = "Get all goals")
     @GetMapping("/list")
@@ -32,6 +34,7 @@ public class GoalController {
     @GetMapping("/add/new")
     public String createGoal(Model model){
         model.addAttribute("goal", new Goal());
+        model.addAttribute("stations",stationService.findAll());
         return "goals/goal_add";
     }
 
@@ -47,6 +50,7 @@ public class GoalController {
     @GetMapping("/edit/{id}")
     public String editGoal(@PathVariable("id") long id, Model model) {
         model.addAttribute("goal",goalService.findById(id));
+        model.addAttribute("stations",stationService.findAll());
         return "goals/goal_edit";
     }
 

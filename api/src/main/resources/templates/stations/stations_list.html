@@ -25,13 +25,13 @@
         <th scope="row" th:text="${station.getId()}"/>
         <td th:text="${station.getName()}"/>
         <td>
-            <a class="btn btn-info rounded-pill px-3" th:href="@{/stations/{stationId}(stationId=${station.getId()})}" role="button">More</a>
+            <a style="color: white" class="btn btn-info rounded-pill px-3" th:href="@{/stations/{stationId}(stationId=${station.getId()})}" role="button">Info</a>
         </td>
         <td>
-            <a class="btn btn-warning rounded-pill px-3" th:href="@{/stations/edit/{stationId}(stationId=${station.getId()})}" role="button">Edit</a>
+            <a style="color: white" class="btn btn-warning rounded-pill px-3" th:href="@{/stations/edit/{stationId}(stationId=${station.getId()})}" role="button">Edit</a>
         </td>
         <td>
-            <a class="btn btn-danger rounded-pill px-3" th:href="@{/stations/delete/{stationId}(stationId=${station.getId()})}" role="button">Delete</a>
+            <a style="color: white" class="btn btn-danger rounded-pill px-3" th:href="@{/stations/delete/{stationId}(stationId=${station.getId()})}" role="button">Delete</a>
         </td>
     </tr>
 </table>

@@ -31,7 +31,4 @@ public class Station {
             inverseJoinColumns = {@JoinColumn(name = "id_worker")}
     )
     private List<Worker> workers;
-    @ManyToOne
-    @JoinColumn(name = "id_goal")
-    private Goal goal;
 }
