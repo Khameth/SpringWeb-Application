@@ -72,13 +72,5 @@ public class StationController {
         return "redirect:/stations/list";
     }
 
-    @ApiOperation(value = "Add worker to station")
-    @GetMapping("/add/worker/{stationId}")
-    public String addWorker(Worker worker, @PathVariable("stationId") long stationId){
-        Station station = stationService.findById(stationId);
-        stationService.addWorker(station,workerService.findById(worker.getId()));
-        stationService.update(station);
-        return String.format("redirect:/stations/%s",stationId);
-    }
 
 }
