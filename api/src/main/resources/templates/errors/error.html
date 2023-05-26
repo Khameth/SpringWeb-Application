@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <th:block th:insert="layouts :: headerfiles"/>
+</head>
+<body>
+<nav th:replace="layouts :: navbar"></nav>
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <h1>404</h1>
+        <h2 class="font-weight-normal lead" th:text="${exception}"></h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,6 +1,7 @@
 package org.project.config;
 
 import org.project.controllers.*;
+import org.project.controllers.exception.ExceptionHandlerController;
 import org.project.repositories.*;
 import org.project.services.*;
 import org.springframework.context.annotation.Bean;
@@ -35,5 +36,10 @@ public class SpringConfig {
     @Bean
     public WorkerController workerController(WorkerService workerService){
         return new WorkerController(workerService);
+    }
+
+    @Bean
+    public ExceptionHandlerController exceptionHandlerController(){
+        return new ExceptionHandlerController();
     }
 }
